@@ -1,0 +1,15 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  color: white;
+}
+
+body {
+  background-color: #00aac0;
+}
+body > header > div > p {
+  color: #00aac0;
+}/*# sourceMappingURL=admin.css.map */
