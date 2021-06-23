@@ -1,0 +1,90 @@
+main {
+  min-height: fit-content;
+}
+main > section {
+  margin: 30px 0px;
+  width: 100%;
+  max-height: 200px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  overflow: hidden;
+  transition: 1s;
+}
+main > section > h2 {
+  width: 30%;
+  text-align: center;
+  background-color: #17A2B8;
+  padding: 10px;
+  transition: 1s;
+}
+main > section > h2:hover {
+  background-color: rgba(23, 162, 184, 0.5);
+  cursor: pointer;
+}
+main > section input,
+main > section select {
+  padding: 10px;
+  font-size: 20px;
+  margin: 0 20px;
+  color: black;
+  outline: none;
+  border: 1px solid black;
+  cursor: pointer;
+}
+main > section input > option,
+main > section select > option {
+  color: black;
+}
+main > section > form {
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+main > .sectionPagoCuotas {
+  max-height: 1000px;
+  transition: 2s;
+}
+main > .sectionPagoCuotas > div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  flex-direction: column;
+}
+main > .sectionPagoCuotas > div table {
+  margin: 30px 0;
+  width: 60%;
+  border: 2px white solid;
+  background-color: #17A2B8;
+}
+main > .sectionPagoCuotas > div table p {
+  text-align: center;
+}
+main > .sectionPagoCuotas > div table td {
+  text-align: center;
+}
+main > .sectionPagoCuotas > div table td > input,
+main > .sectionPagoCuotas > div table td > select {
+  font-size: 15px;
+  padding: 5px 10px;
+  margin: 5px 0;
+}
+main > .sectionPagoCuotas > div table td > input > option,
+main > .sectionPagoCuotas > div table td > select > option {
+  color: black;
+}
+main > .sectionPagoCuotas.hidden {
+  max-height: 0;
+  margin: 0;
+}
+
+.hidden {
+  max-height: 0;
+  margin: 0;
+}/*# sourceMappingURL=movimientos.css.map */
