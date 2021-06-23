@@ -15,13 +15,13 @@
         <nav>
             <ul>
                 <li>
-                    <a href="">CUENTAS</a>
+                    <a href="cuentas.jsp">CUENTAS</a>
                 </li>
                 <li>
-                    <a href="">MOVIMIENTOS</a>
+                    <a href="Movimientos.jsp">MOVIMIENTOS</a>
                 </li>
                 <li>
-                    <a href="">MI CUENTA</a>
+                    <a href="InfoUsuarios.jsp">MI CUENTA</a>
                 </li>
             </ul>
         </nav>

@@ -16,10 +16,10 @@
         <nav>
             <ul>
                 <li>
-                    <a href="" class="active">GESTION DE CUENTAS</a>
+                    <a href="GestionCuentas.jsp" class="active">GESTION DE CUENTAS</a>
                 </li>
                 <li>
-                    <a href="">SOLICITUDES</a>
+                    <a href="Solicitudes.jsp">SOLICITUDES</a>
                 </li>
                 <li>
                     <a href="">INFORMES</a>

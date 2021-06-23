@@ -16,13 +16,13 @@
         <nav>
             <ul>
                 <li>
-                    <a href="">CUENTAS</a>
+                    <a href="cuentas.jsp">CUENTAS</a>
                 </li>
                 <li>
-                    <a href="">MOVIMIENTOS</a>
+                    <a href="Movimientos.jsp">MOVIMIENTOS</a>
                 </li>
                 <li>
-                    <a href="">MI CUENTA</a>
+                    <a href="InfoUsuarios.jsp">MI CUENTA</a>
                 </li>
             </ul>
         </nav>
@@ -52,7 +52,7 @@
             <label><input type="text" placeholder="Nacimiento" name="txtNacimiento" disabled></label>
             <h3>Direccion</h3>
             <label><input type="text" placeholder="Direccion" name="txtDireccion" disabled></label>
-            <br>
+            
             <h3>Localidad</h3>
             <label><input type="text" placeholder="Localidad" name="txtLocalidad" disabled></label>
             <h3>Provincia</h3>

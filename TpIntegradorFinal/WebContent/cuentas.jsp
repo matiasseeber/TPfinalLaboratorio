@@ -17,18 +17,18 @@
 <body>
     <header>
     <nav>
-        <ul>
-            <li>
-                <a href="">CUENTAS</a>
-            </li>
-            <li>
-                <a href="">MOVIMIENTOS</a>
-            </li>
-            <li>
-                <a href="">MI CUENTA</a>
-            </li>
-        </ul>
-    </nav>
+            <ul>
+                <li>
+                    <a href="cuentas.jsp">CUENTAS</a>
+                </li>
+                <li>
+                    <a href="Movimientos.jsp">MOVIMIENTOS</a>
+                </li>
+                <li>
+                    <a href="InfoUsuarios.jsp">MI CUENTA</a>
+                </li>
+            </ul>
+        </nav>
     <div class="user">
         <p>NOMBRE USUARIO</p>
         <input type="button" value="Log Out">
