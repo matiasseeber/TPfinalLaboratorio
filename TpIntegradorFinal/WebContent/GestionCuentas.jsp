@@ -164,5 +164,6 @@
             <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque aliquid aliquam et doloribus incidunt ab blanditiis ratione similique, quas enim reprehenderit quidem deleniti beatae eligendi excepturi doloremque sequi. Voluptatem, molestias.</P>
         </div>
     </footer>
+    <script src="js/fontAwesome.js"></script>
 </body>
 </html>
