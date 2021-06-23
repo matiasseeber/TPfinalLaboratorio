@@ -1,0 +1,27 @@
+body > main {
+  min-height: 65vh;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+body > main > section {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  margin-top: 25px;
+}
+body > main > section > div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+  height: 80px;
+  margin: 20px;
+  background-color: #463b3b;
+  border-radius: 50px;
+}
+body > main > section > table > tbody > tr > td > input {
+  color: black;
+}
