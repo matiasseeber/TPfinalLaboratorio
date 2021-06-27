@@ -33,6 +33,29 @@
     </header>
     <main>
         <h1>Gestión de cuentas</h1>
+         <div class="user">
+            <p> <i class="fas fa-location-arrow"></i>Clientes</p>
+        </div>
+        <form action="">
+            <table cellpadding="0" cellspacing="0">
+                <tr>
+                    <th>Dni</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Usuario</th>
+                    <th>Contraseña</th>
+                    <th>Crear Usuario</th>
+                </tr>
+                <tr>
+                    <td>45588874 <input type="hidden" name="Escondido"></td>
+                    <td>Matias</td>
+                    <td>Alves Ventura</td>
+                    <td><input type="text" name="txtUsuario" placeholder="Nombre de usuario"></td>
+                    <td><input type="text" name="txtContraseña" placeholder="Contraseña"></td>
+                    <td><input type="submit" value="Crear"></td>
+                </tr>
+            </table>
+        </form>
         <div class="user">
             <p> <i class="fas fa-location-arrow"></i>Usuarios</p>
         </div>
