@@ -37,10 +37,38 @@ public class daoClienteImpl implements daoCliente{
 	}
 
 	@Override
-	public cliente obtenerCliente(usuario usuario) {
-		// TODO Auto-generated method stub
-		cliente cliente = new cliente();
-		return cliente;
+	public cliente obtenerCliente(String dni) {
+		cn = new Conexion();
+		cn.Open();
+		 cliente cliente = new cliente();
+		 try
+		 {
+			 ResultSet rs= cn.query("select clientes.dni, cuil, nombre, Apellido, sexo, nacionalidad, Fecha_nacimiento, direccion, localidad, provincia, Telefono_L, Telefono_M from clientes WHERE clientes.dni = '"+dni+"'");
+			 while(rs.next())
+			 {
+				 cliente.setDni(rs.getString("clientes.dni"));
+				 cliente.setCuil(rs.getString("cuil"));
+				 cliente.setNombre(rs.getString("nombre"));
+				 cliente.setApellido(rs.getString("Apellido"));
+				 cliente.setSexo(rs.getString("sexo"));
+				 cliente.setNacionalidad(rs.getString("nacionalidad"));
+				 cliente.setFechaNacimiento(rs.getString("Fecha_nacimiento"));
+				 cliente.setDireccion(rs.getString("direccion"));
+				 cliente.setLocalidad(rs.getString("localidad"));
+				 cliente.setProvincia(rs.getString("provincia"));
+				 cliente.setTelefonoLinea(rs.getString("Telefono_L"));
+				 cliente.setTelefonoMovil(rs.getString("Telefono_M"));
+			 }	 
+		 }
+		 catch(Exception e)
+		 {
+			 e.printStackTrace();
+		 }
+		 finally
+		 {
+			 cn.close();
+		 }
+		 return cliente;
 	}
 
 	@Override

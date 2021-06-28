@@ -34,4 +34,28 @@ public class daoTipoCuentaImpl implements daoTipoCuenta{
 		 }
 		 return list;
 	}
+	@Override
+	public tipoCuenta obtenerTipoCuenta(String codTipoCuenta) {
+		cn = new Conexion();
+		cn.Open();
+		tipoCuenta tipoCuenta = new tipoCuenta();
+		 try
+		 {
+			 ResultSet rs= cn.query("select cod_tipocuenta,descripcion from tipocuentas where cod_tipocuenta ='"+codTipoCuenta+"'");
+			 while(rs.next())
+			 {
+				 tipoCuenta.setCodTipoCuenta(rs.getString("cod_tipocuenta"));
+				 tipoCuenta.setDescripcion(rs.getString("descripcion"));
+			 }	 
+		 }
+		 catch(Exception e)
+		 {
+			 e.printStackTrace();
+		 }
+		 finally
+		 {
+			 cn.close();
+		 }
+		 return tipoCuenta;
+	}
 }

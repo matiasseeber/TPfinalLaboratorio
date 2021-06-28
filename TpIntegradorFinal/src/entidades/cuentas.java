@@ -8,13 +8,9 @@ public class cuentas {
 	private String numCuenta;
 	private float saldo;
 	private boolean estado;
-	
-	public cuentas() {
-		
-	}
-	
+	private String cbu;
 	public cuentas(entidades.tipoCuenta tipoCuenta, entidades.usuario usuario, String dni, String fecha,
-			String numCuenta, float saldo, boolean estado) {
+			String numCuenta, float saldo, boolean estado, String cbu) {
 		super();
 		this.tipoCuenta = tipoCuenta;
 		this.usuario = usuario;
@@ -23,8 +19,20 @@ public class cuentas {
 		this.numCuenta = numCuenta;
 		this.saldo = saldo;
 		this.estado = estado;
+		this.cbu = cbu;
 	}
 
+	public String getCbu() {
+		return cbu;
+	}
+
+	public void setCbu(String cbu) {
+		this.cbu = cbu;
+	}
+
+	public cuentas() {
+		
+	}
 	public tipoCuenta getTipoCuenta() {
 		return tipoCuenta;
 	}

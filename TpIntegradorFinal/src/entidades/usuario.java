@@ -2,18 +2,35 @@ package entidades;
 
 public class usuario {
 	private cliente cliente;
-	private String email;
-	private boolean admin;
-	private boolean estado;
-	private String dni;
-	public usuario(entidades.cliente cliente, String email, boolean admin, boolean estado, String dni) {
+	private String nombreUsuario;
+	public usuario(entidades.cliente cliente, String nombreUsuario, String email, String contraseña, boolean admin,
+			boolean estado, String dni) {
 		super();
 		this.cliente = cliente;
+		this.nombreUsuario = nombreUsuario;
 		this.email = email;
+		this.contraseña = contraseña;
 		this.admin = admin;
 		this.estado = estado;
 		this.dni = dni;
 	}
+	public String getNombreUsuario() {
+		return nombreUsuario;
+	}
+	public void setNombreUsuario(String nombreUsuario) {
+		this.nombreUsuario = nombreUsuario;
+	}
+	public String getContraseña() {
+		return contraseña;
+	}
+	public void setContraseña(String contraseña) {
+		this.contraseña = contraseña;
+	}
+	private String email;
+	private String contraseña;
+	private boolean admin;
+	private boolean estado;
+	private String dni;
 	public cliente getCliente() {
 		return cliente;
 	}
