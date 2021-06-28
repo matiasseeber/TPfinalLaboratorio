@@ -5,5 +5,6 @@ import entidades.*;
 
 public interface daoCliente{
 	public List<cliente> obtenerTodos();
-	public boolean insertar(cliente cliente);
+	public cliente obtenerCliente(usuario usuario);
+	public List<cliente> obtenerClientesSinUsuario();
 }
