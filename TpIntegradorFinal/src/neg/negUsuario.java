@@ -10,4 +10,6 @@ public interface negUsuario {
 	public boolean modificarUsuario(usuario usuario);
 	public usuario traerUsuario(usuario usuario);
 	public boolean bajaUsuario(usuario usuario);
+	public boolean usuarioExiste(String nombreUsuario, String contraseña);
+	public usuario traerUsuarioLogin(String nombreUsuario, String contraseña);
 }

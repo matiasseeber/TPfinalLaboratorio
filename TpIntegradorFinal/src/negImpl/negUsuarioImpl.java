@@ -33,5 +33,15 @@ public class negUsuarioImpl implements negUsuario{
 		daoUsuarioImpl daoUsuarioImpl = new daoUsuarioImpl();
 		return daoUsuarioImpl.bajaUsuario(usuario);
 	}
+	@Override
+	public boolean usuarioExiste(String nombreUsuario, String contraseña) {
+		daoUsuarioImpl daoUsuarioImpl = new daoUsuarioImpl();
+		return daoUsuarioImpl.usuarioExiste(nombreUsuario, contraseña);
+	}
+	@Override
+	public usuario traerUsuarioLogin(String nombreUsuario, String contraseña) {
+		daoUsuarioImpl daoUsuarioImpl = new daoUsuarioImpl();
+		return daoUsuarioImpl.traerUsuarioLogin(nombreUsuario, contraseña);
+	}
 
 }

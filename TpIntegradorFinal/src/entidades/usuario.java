@@ -13,6 +13,9 @@ public class usuario {
 		this.admin = admin;
 		this.estado = estado;
 	}
+	public usuario() {
+		
+	}
 	public String getNombreUsuario() {
 		return nombreUsuario;
 	}

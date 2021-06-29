@@ -136,4 +136,49 @@ public class daoUsuarioImpl implements daoUsuario{
         }
         return estado;
 	}
+	@Override
+	public boolean usuarioExiste(String nombreUsuario, String contraseña) {
+		boolean estado = true;
+        cn = new Conexion();
+        cn.Open();
+        String query = "select * from usuarios where  estado ='"+1+"' and nombreUsuario = '"+nombreUsuario+"' and Contraseña ='"+contraseña+"'";
+        try
+         {
+            estado = cn.execute(query);
+         }
+        catch(Exception e)
+        {
+            e.printStackTrace();
+        }
+        finally
+        {
+            cn.close();
+        }
+        return estado;
+	}
+	@Override
+	public usuario traerUsuarioLogin(String nombreUsuario, String contraseña) {
+        usuario usuario2 = null;
+        cn = new Conexion();
+        cn.Open();
+		 try
+		 {
+			 ResultSet rs= cn.query("select usuarios.nombreUsuario, usuarios.dni, usuarios.Email, Usuarios.Contraseña, Usuarios.Administrador, Usuarios.estado from usuarios where estado ='"+1+"' and nombreUsuario = '"+nombreUsuario+"' and Contraseña ='"+contraseña+"'");
+			 //while(rs.next())
+			// {
+				 daoClienteImpl daoClienteImpl = new daoClienteImpl();
+				 usuario2 = new usuario(daoClienteImpl.obtenerCliente(rs.getString("usuarios.dni")),rs.getString("usuarios.nombreUsuario"),rs.getString("usuarios.email"),rs.getString("Usuarios.contraseña"),rs.getBoolean("Usuarios.Administrador"),rs.getBoolean("Usuarios.estado"),rs.getString("usuarios.dni"));
+
+			 //}	 
+		 }
+		 catch(Exception e)
+		 {
+			 e.printStackTrace();
+		 }
+		 finally
+		 {
+			 cn.close();
+		 }
+		 return usuario2;
+	}
 }
