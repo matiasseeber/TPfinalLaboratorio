@@ -11,7 +11,7 @@
 <%@include file="WEB-INF/login.css"%></style>
 </head>
 <body>
-    <form action="servletLogin" method="POST">
+    <form action="servletLogin" method="Get">
         <div>
             <h1>INICIO DE SESION</h1>
         </div>

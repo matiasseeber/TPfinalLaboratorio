@@ -26,14 +26,6 @@ public class servletLogin extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-	}
-
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
-	
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		if(request.getParameter("btnLogin")!=null){
 			String nombre = request.getParameter("nombreUsuario");
 			String contra = request.getParameter("passwordUsuario");
@@ -50,6 +42,14 @@ public class servletLogin extends HttpServlet {
 			RequestDispatcher rDispatcher = request.getRequestDispatcher("/Login.jsp");
 			rDispatcher.forward(request, response);	
 		}
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
 	}
 
 }
