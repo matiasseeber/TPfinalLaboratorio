@@ -69,6 +69,7 @@
                     <th>Apellido</th>
                     <th>Contraseña</th>
                     <th>Modificar</th>
+                    <th>Eliminar</th>
                     <th>Seleccionar</th>
                 </tr>
                 <tr>
@@ -87,8 +88,9 @@
                     <td>Matias</td>
                     <td>Alves Ventura</td>
                     <td><input type="text" name="txtContraseña" value="55555"></td>
-                    <td><input type="submit" value="Modificar"></td>
-                    <td><input type="submit" value="Seleccionar"></td>
+                    <td><input type="submit" value="Modificar" name="txtModificar"></td>
+                    <td><input type="submit" name="txtEliminar" value="Eliminar"></td>
+                    <td><input type="submit" value="Seleccionar" name="txtSeleccionar"></td>
                 </tr>
                 <tr>
                     <td>48555871 <input type="hidden" name="Escondido"></td>
@@ -104,8 +106,9 @@
                     <td>Romina</td>
                     <td>Gomez</td>
                     <td><input type="text" name="txtContraseña" value="87888982"></td>
-                    <td><input type="submit" value="Modificar"></td>
-                    <td><input type="submit" value="Seleccionar"></td>
+                    <td><input type="submit" value="Modificar" name="txtModificar"></td>
+                    <td><input type="submit" name="txtEliminar" value="Eliminar"></td>
+                    <td><input type="submit" value="Seleccionar" name="txtSeleccionar"></td>
                 </tr>
                 <tr>
                     <td>48555871 <input type="hidden" name="Escondido"></td>
@@ -121,8 +124,9 @@
                     <td>Romina</td>
                     <td>Gomez</td>
                     <td><input type="text" name="txtContraseña" value="87888982"></td>
-                    <td><input type="submit" value="Modificar"></td>
-                    <td><input type="submit" value="Seleccionar"></td>
+                    <td><input type="submit" value="Modificar" name="txtModificar"></td>
+                    <td><input type="submit" name="txtEliminar" value="Eliminar"></td>
+                    <td><input type="submit" value="Seleccionar" name="txtSeleccionar"></td>
                 </tr>
                 <tr>
                     <td>48555871 <input type="hidden" name="Escondido"></td>
@@ -138,8 +142,9 @@
                     <td>Romina</td>
                     <td>Gomez</td>
                     <td><input type="text" name="txtContraseña" value="87888982"></td>
-                    <td><input type="submit" value="Modificar"></td>
-                    <td><input type="submit" value="Seleccionar"></td>
+                    <td><input type="submit" value="Modificar" name="txtModificar"></td>
+                    <td><input type="submit" name="txtEliminar" value="Eliminar"></td>
+                    <td><input type="submit" value="Seleccionar" name="txtSeleccionar"></td>
                 </tr>
             </table>
         </form>
@@ -155,6 +160,7 @@
                     <th>Cbu</th>
                     <th>Monto</th>
                     <th>Fecha de creación</th>
+                    <th>Eliminar</th>
 
                 </tr>
                 <tr>
@@ -162,12 +168,14 @@
                     <td>4555488784</td>
                     <td>$45.000</td>
                     <td>7/10/20</td>
+                    <td><input type="submit" name="txtEliminar" value="Eliminar"></td>
                 </tr>
                 <tr>
                     <td><b>5564784 </b> <input type="hidden" name="Escondido"></td>
                     <td>4555488788</td>
                     <td>$7.820</td>
                     <td>20/1/21</td>
+                    <td><input type="submit" name="txtEliminar" value="Eliminar"></td>
                 </tr>
             </table>
             <div class="agregar"><i class="fas fa-plus-circle"></i></div>
