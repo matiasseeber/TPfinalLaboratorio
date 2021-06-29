@@ -22,7 +22,7 @@
                     <a href="Solicitudes.jsp">SOLICITUDES</a>
                 </li>
                 <li>
-                    <a href="">INFORMES</a>
+                    <a href="Reportes.jsp">INFORMES</a>
                 </li>
             </ul>
         </nav>

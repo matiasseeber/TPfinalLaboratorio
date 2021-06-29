@@ -12,7 +12,6 @@ public class usuario {
 		this.contraseña = contraseña;
 		this.admin = admin;
 		this.estado = estado;
-		this.dni = dni;
 	}
 	public String getNombreUsuario() {
 		return nombreUsuario;
@@ -54,11 +53,5 @@ public class usuario {
 	}
 	public void setEstado(boolean estado) {
 		this.estado = estado;
-	}
-	public String getDni() {
-		return dni;
-	}
-	public void setDni(String dni) {
-		this.dni = dni;
 	}
 }

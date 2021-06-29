@@ -1,14 +1,10 @@
 package daoImpl;
 
-import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.mysql.cj.jdbc.CallableStatement;
-
 import dao.daoCuentas;
-import entidades.cliente;
 import entidades.cuentas;
 import entidades.tipoCuenta;
 import entidades.usuario;
@@ -24,11 +20,11 @@ public class daoCuentaImpl implements daoCuentas{
 		 ArrayList<cuentas> list = new ArrayList<cuentas>();
 		 try
 		 {
-			 ResultSet rs= cn.query("select cbu,dni,fecha_creacion,Cod_TipoCuenta,num_cuenta,saldo,estado,cbu from cuentas where dni = '"+usuario.getDni()+"'");
+			 ResultSet rs= cn.query("select cbu,dni,fecha_creacion,Cod_TipoCuenta,num_cuenta,saldo,estado,cbu from cuentas where dni = '"+usuario.getCliente().getDni()+"'");
 			 while(rs.next())
 			 {
 				 daoTipoCuentaImpl daoTipoCuentaImpl = new daoTipoCuentaImpl();
-				 cuentas cuentas = new cuentas(daoTipoCuentaImpl.obtenerTipoCuenta(rs.getString("Cod_TipoCuenta")),usuario,usuario.getDni(),rs.getString("fecha_creacion"),rs.getString("num_cuenta"),rs.getFloat("saldo"),rs.getBoolean("estado"),rs.getString("cbu"));
+				 cuentas cuentas = new cuentas(daoTipoCuentaImpl.obtenerTipoCuenta(rs.getString("Cod_TipoCuenta")),usuario,usuario.getCliente().getDni(),rs.getString("fecha_creacion"),rs.getString("num_cuenta"),rs.getFloat("saldo"),rs.getBoolean("estado"),rs.getString("cbu"));
 				 list.add(cuentas);
 			 }	 
 		 }
@@ -49,7 +45,7 @@ public class daoCuentaImpl implements daoCuentas{
         cn = new Conexion();
         cn.Open();
         String query = "insert into cuentas (dni,cod_tipocuenta,estado) values "
-        		+ "('" + usuario.getDni() +"','"+ tipoCuenta.getCodTipoCuenta()+"',"+1+")";
+        		+ "('" + usuario.getCliente().getDni() +"','"+ tipoCuenta.getCodTipoCuenta()+"',"+1+")";
         System.out.println(query);
         try
          {

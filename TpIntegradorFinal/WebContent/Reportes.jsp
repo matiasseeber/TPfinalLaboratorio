@@ -9,6 +9,7 @@
 <%@include file="WEB-INF/bootstrap.min.css"%>
 <%@include file="WEB-INF/dataTables.bootstrap4.min.css"%>
 <%@include file="WEB-INF/style.css"%>
+<%@include file="WEB-INF/admin.css"%>
 </style>
 
 
@@ -17,24 +18,24 @@
 <body>
 
     <header>
-    <nav>
+        <nav>
             <ul>
                 <li>
-                    <a href="cuentas.jsp">CUENTAS</a>
+                    <a href="GestionCuentas.jsp" class="active">GESTION DE CUENTAS</a>
                 </li>
                 <li>
-                    <a href="Movimientos.jsp">MOVIMIENTOS</a>
+                    <a href="Solicitudes.jsp">SOLICITUDES</a>
                 </li>
                 <li>
-                    <a href="InfoUsuarios.jsp">MI CUENTA</a>
+                    <a href="Reportes.jsp">INFORMES</a>
                 </li>
             </ul>
         </nav>
-    <div class="user">
-        <p>NOMBRE USUARIO</p>
-        <input type="button" value="Log Out">
-    </div>
-</header>
+        <div class="user">
+            <p>NOMBRE USUARIO</p>
+            <input type="button" value="Log Out">
+        </div>
+    </header>
 
 <div class="bg-info text-white">
     <div class="display-4 container p-4">

@@ -24,7 +24,7 @@ public class daoUsuarioImpl implements daoUsuario{
         cn = new Conexion();
         cn.Open();
         String query = "insert into usuario (Email,Contraseña,Administrador, estado, dni) values "
-        		+ "('"+usuario.getEmail()+"','"+usuario.getContraseña()+"','"+1+"','"+1+"','"+usuario.getDni()+"',')";
+        		+ "('"+usuario.getEmail()+"','"+usuario.getContraseña()+"','"+1+"','"+1+"','"+usuario.getCliente().getDni()+"',')";
         System.out.println(query);
         try
          {
@@ -72,7 +72,7 @@ public class daoUsuarioImpl implements daoUsuario{
 		boolean estado=true;
         cn = new Conexion();
         cn.Open();
-        String query = "update cuentas set contraseña ='"+usuario.getContraseña()+"' where dni = '"+usuario.getDni()+"'";
+        String query = "update cuentas set contraseña ='"+usuario.getContraseña()+"' where dni = '"+usuario.getCliente().getDni()+"'";
         System.out.println(query);
         try
          {
@@ -96,7 +96,7 @@ public class daoUsuarioImpl implements daoUsuario{
 		usuario usuario2 = null;
 		 try
 		 {
-			 ResultSet rs= cn.query("select usuarios.nombreUsuario, usuarios.dni, usuarios.Email, Usuarios.Contraseña, Usuarios.Administrador, Usuarios.estado from usuarios where estado = 1 and dni='"+usuario.getDni()+"'");
+			 ResultSet rs= cn.query("select usuarios.nombreUsuario, usuarios.dni, usuarios.Email, Usuarios.Contraseña, Usuarios.Administrador, Usuarios.estado from usuarios where estado = 1 and dni='"+usuario.getCliente().getDni()+"'");
 			 while(rs.next())
 			 {
 				 daoClienteImpl daoClienteImpl = new daoClienteImpl();
@@ -120,7 +120,7 @@ public class daoUsuarioImpl implements daoUsuario{
 		boolean estado=true;
         cn = new Conexion();
         cn.Open();
-        String query = "update cuentas set estado ='"+0+"' where dni = '"+usuario.getDni()+"'";
+        String query = "update cuentas set estado ='"+0+"' where dni = '"+usuario.getCliente().getDni()+"'";
         System.out.println(query);
         try
          {
