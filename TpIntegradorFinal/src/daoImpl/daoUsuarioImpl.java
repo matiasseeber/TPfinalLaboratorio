@@ -141,7 +141,7 @@ public class daoUsuarioImpl implements daoUsuario{
 		boolean estado = true;
         cn = new Conexion();
         cn.Open();
-        String query = "select * from usuarios where estado ='"+1+"' and nombreUsuario = '"+nombreUsuario+"' and Contraseña ='"+contraseña+"'";
+        String query = "select * from usuarios where nombreUsuario = 'alejo' and contraseña = '123' ";
         try
          {
             estado = cn.execute(query);

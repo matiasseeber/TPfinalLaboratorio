@@ -19,8 +19,8 @@ public class Conexion {
 	{
 		try
 		{
-			Class.forName("com.mysql.jdbc.Driver");
-			this.connection = DriverManager.getConnection(host+dbName, user, pass);
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			this.connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/proyectobanco","root","root");
 		}
 		catch(Exception e)
 		{
@@ -51,7 +51,7 @@ public class Conexion {
 		boolean save = true;
 		try {
 			st = connection.createStatement();
-		    st.executeUpdate(query);
+		    st.executeQuery(query);
 		}
 		catch(SQLException e)
 		{
